@@ -1,6 +1,7 @@
 # API-Dengan-GraphQL
 
 ## Getting Started
+GraphQL adalah sebuah bahasa query modern untuk API. Dengan menggunakan syntax, GraphQL dapat mengambil hanya data apa saja yang diperlukan secara lebih spesifik. more info: [https://graphql.org/](https://graphql.org/)
 
 Installation:
 
