@@ -10,7 +10,7 @@ Base = declarative_base()
 
 #create database location
 project_dir = os.path.dirname(os.path.abspath(__file__))
-database_file = "sqlite:///{}".format(os.path.join(project_dir, "mydb2.db"))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "mydb.db"))
 
 engine = create_engine(database_file, convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
@@ -30,5 +30,5 @@ class Post(Base):
     uuid = Column(Integer, primary_key=True)
     title = Column(String(256), index=True)
     body = Column(Text)
+    author_post = Column(String(256), index=True)
     author_id = Column(Integer, ForeignKey('users.uuid'))
-
